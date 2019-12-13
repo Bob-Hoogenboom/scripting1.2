@@ -14,7 +14,8 @@ canvas.height = height;
 
 circles = []
 
-for(let i =0; i<10 :i++){
+for (let i =0; i<10 ;i++)
+{
   let circleObject = {};
   circleObject.x = getRandomInt(0,width);
   circleObject.y = getRandomInt(0,height);
