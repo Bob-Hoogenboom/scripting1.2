@@ -21,7 +21,7 @@ padLeft.width = 20;
 padLeft.height = 200;
 padLeft.X = 20
 padLeft.Y = canvas.height/2
-padLeft.speedY = 5
+padLeft.speedY = 50
 
 padLeft.update = function(){
   padLeft.Y += padLeft.speedY;
@@ -34,7 +34,7 @@ padRight.width = 20;
 padRight.height = 200;
 padRight.X = canvas.width-35
 padRight.Y = canvas.height/2
-padRight.speedY = 5
+padRight.speedY = 50
 
 padRight.update = function(){
   padRight.Y += padRight.speedY;
@@ -104,17 +104,17 @@ window.addEventListener('keydown', keyDownHandler);
 
 function keyDownHandler(event){
   if(event.key == "s"){
-    padLeft.Y += 5;
+    padLeft.Y += 12;
   }
   if(event.key == "w"){
-    padLeft.Y += -5;
+    padLeft.Y += -12;
   }
 
   if(event.key == "ArrowDown"){
-    padRight.Y += 5;
+    padRight.Y += 12;
   }
   if(event.key == "ArrowUp"){
-    padRight.Y += -5;
+    padRight.Y += -12;
   }
 }
 
@@ -126,7 +126,7 @@ function anime(){
   padLeft.draw()
   padRight.draw()
   context.font = "30px Arial";
-  context.fillText(score.left+":"+score.right, 10, 50);
+  context.fillText(score.left+":"+score.right, canvas.width/2, 50);
 }
 
-setInterval(anime,10)
+setInterval(anime,12)
